@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col" *ngFor="let car of cars">
+    <div class="card" style="width: 18rem;">
+      <img [src]="car.image" class="card-img-top" alt="Car Image">
+
+      <div class="card-body">
+        <h5 class="card-title">{{ car.model }}</h5>
+        <p class="card-text">Price: {{ car.price }}</p>
+        <p class="card-text">Company: {{ car.company }}</p>
+        <p class="card-text">Color: {{ car.colour }}</p>
+        <p class="card-text">Description: {{car.description}}</p>
+        <p class="card-text">Total Price: {{ calculateTotalPrice(car.price) }}</p>
+        <button href="#" class="btn btn-primary" (click)="navigateTo('booking')">Book car</button>
+      </div>
+    </div>
+  </div>
+</div>

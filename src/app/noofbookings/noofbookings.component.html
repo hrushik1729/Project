@@ -1,0 +1,75 @@
+<style>
+  /* Apply hover styles to table rows and cells */
+.user-table {
+ border-collapse: collapse;
+ width: 80%;
+margin-left: 165px;
+}
+
+.user-table th, .user-table td {
+ border: 2px solid black;
+ padding: 12px;
+ border: none;
+
+}
+
+.user-table th {
+ border-radius: 8px 8px 0 0;
+ background-color: #ccc; /* Grey */
+}
+
+.user-table td {
+ border-top: none;
+ background-color: #fff; /* White */
+}
+
+/* Change background color on hover */
+.user-table tr:hover {
+ background-color: #ddd; /* Light Grey */
+}
+
+/* Optional: Change cell background color on hover */
+.user-table td:hover {
+ background-color: #bbb; /* Darker Grey */
+}
+
+h1{
+ text-align: center;
+ color: rgb(88, 88, 88);
+}
+
+
+
+ </style>
+ 
+
+
+<div class="bg.img">
+ <h1>Booking Details</h1>
+<table class="user-table">
+<thead>
+  <tr>
+    <th>Email</th>
+    <th>Car Name</th>
+    <th>Date</th>
+    <th>Days</th>
+    <th>Phone</th>
+    <th>PaymentMethod</th>
+    
+    <th>TotalPrice</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let booking of bookings">
+    
+    <td>{{booking.email}}</td>
+    <td>{{booking.name}}</td>
+    <td>{{booking.date}}</td>
+    <td>{{booking.days}}</td>
+    <td>{{booking.phone}}</td>
+    <td>{{booking.payment}}</td>
+    <td>{{booking.totalprice}}</td>
+  </tr>
+</tbody>
+</table>
+</div>

@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    /* background-image: url('D:/ProjectMain/Project/src/assets/Images/bg-2.jpg'); */
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat ;
+    height:70vh;
+
+}
+.bg-img{
+    background-image: url('https://www.autocar.co.uk/sites/autocar.co.uk/files/images/car-reviews/first-drives/legacy/100-best-luxury-cars.jpg');
+    background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+    width: 50%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255,0.5);
+}
+table {
+    width: 100%;
+}
+td {
+    padding: 10px;
+}
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+    text-align: center;
+}
+
+/* Optional: Add styles to center the button */
+.button-container {
+    text-align: center;
+}
+h1{
+    color: #4CAF50;
+    text-align: center;
+}

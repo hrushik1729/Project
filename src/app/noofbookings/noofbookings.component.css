@@ -1,0 +1,9 @@
+.bg.img{
+    background-image: url('https://www.getpalmd.com/wp-content/uploads/2016/05/Porsche-911-Carrera-S-firstdrive.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }

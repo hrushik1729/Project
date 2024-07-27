@@ -1,0 +1,45 @@
+
+<div class="container">
+    <h1>Booking with us! </h1>
+    <form #regForm="ngForm" (ngSubmit)="booking(regForm.value)" novalidate>
+
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name" ngModel required ></td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td><input type="text" name="phone" ngModel required ></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" name="email" ngModel required ></td>
+            </tr>
+            <tr>
+                <td>Payment</td>
+                <td>
+                  <select id="payment" name="payment" ngModel required>
+                    <option value="gpay">gpay</option>
+                    <option value="paytm">paytm</option>
+                    <option value="cashOnDelivery">Cash on Delivery</option>
+                    <option value="phonepay">Phonepay</option>
+                  </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td><input type="date" name="date" ngModel required ></td>
+            </tr>
+            <tr>
+                <td>Days</td>
+                <td><input type="number" name="days" ngModel required ></td>
+            </tr>
+            <tr>
+                <td>TotalPrice</td>
+                <td><input type="number" name="totalprice" ngModel required ></td>
+            </tr>
+            <tr><button type="submit">Submit</button></tr>
+        </table>
+    </form>
+</div>

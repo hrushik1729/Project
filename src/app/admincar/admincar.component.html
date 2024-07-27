@@ -1,0 +1,62 @@
+<div class="row">
+  <div class="col" *ngFor="let car of Cars">
+    <div class="card" style="width: 18rem;">
+      <img [src]="car.image" class="card-img-top" alt="Car Image">
+      <div class="card-body">
+        <h5 class="card-title">{{ car.model }}</h5>
+        <p class="card-text">Price: {{ car.price }}</p>
+        <p class="card-text">Company: {{ car.company }}</p>
+        <p class="card-text">Color: {{ car.colour }}</p>
+        <p class="card-text">Description: {{ car.description }}</p>
+        <button class="btn btn-danger" (click)="deleteCar(car)">Delete Car</button>
+        <button class="btn btn-secondary" (click)="editServices(car)">Edit Car</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="empModal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Update Car</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table align="center">
+          <tbody>
+            <tr>
+              <td>Image</td>
+              <td><input type="url" name="image" [(ngModel)]="selectedCar.image" /></td>
+            </tr>
+            <tr>
+              <td>Model</td>
+              <td><input type="text" name="model" [(ngModel)]="selectedCar.model" /></td>
+            </tr>
+            <tr>
+              <td>Company</td>
+              <td><input type="text" name="company" [(ngModel)]="selectedCar.company" /></td>
+            </tr>
+            <tr>
+              <td>Color</td>
+              <td><input type="text" name="colour" [(ngModel)]="selectedCar.colour" /></td>
+            </tr>
+            <tr>
+              <td>Price</td>
+              <td><input type="number" name="price" [(ngModel)]="selectedCar.price" /></td>
+            </tr>
+            <tr>
+              <td>Description</td>
+              <td><input type="text" name="description" [(ngModel)]="selectedCar.description" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" (click)="updateServices()" class="btn btn-secondary">Update Car</button>
+      </div>
+    </div>
+  </div>
+</div>

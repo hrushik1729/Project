@@ -1,0 +1,37 @@
+<div class="bg-img">
+    <div class="container">
+        <h1>Car Registration</h1>
+        <form #regForm="ngForm" (ngSubmit)="carRegister(regForm.value)" novalidate>
+
+            <table>
+                <tr>
+                    <td><h3>ImageURL</h3></td>
+                    <td><input type="text" name="image" ngModel required></td>
+                </tr>
+                <tr>
+                    <td><h3>Model</h3></td>
+                    <td><input type="text" name="model" ngModel required></td>
+                </tr>
+                <tr>
+                    <td><h3>Company</h3></td>
+                    <td><input type="text" name="company" ngModel required></td>
+                </tr>
+                <tr>
+                    <td><h3>Colour</h3></td>
+                    <td><input type="text" name="colour" ngModel required></td>
+                </tr>
+                <tr>
+                    <td><h3>Price</h3></td>
+                    <td><input type="number" name="price" ngModel required></td>
+                </tr>
+                <tr>
+                    <td><h3>Description</h3></td>
+                    <td><input type="text" name="description" ngModel required></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button type="submit" [disabled]="!regForm.valid">Register</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+<style>
+    /* Apply hover styles to table rows and cells */
+ .user-table {
+   border-collapse: collapse;
+   width: 80%;
+   margin-left: 165px;
+ }
+ 
+ .user-table th, .user-table td {
+   border: 2px solid black;
+   padding: 12px;
+   
+ 
+ }
+ 
+ .user-table th {
+   border-radius: 8px 8px 0 0;
+   background-color: rgb(233, 173, 173);
+ }
+ 
+ .user-table td {
+   border-top: none;
+   background-color: rgb(241, 237, 237);
+ }
+ 
+ /* Change background color on hover */
+ .user-table tr:hover {
+   background-color: rgb(202, 145, 145);
+ }
+ 
+ /* Optional: Change cell background color on hover */
+ .user-table td:hover {
+   background-color: rgb(202, 145, 145);
+ }
+ h1{
+   text-align: center;
+   color: rgb(88, 88, 88);
+ }
+ 
+ 
+   </style>
+   
+   <h1>User Details</h1>
+   <table class="user-table">
+     <thead>
+       <tr>
+         <!-- <th>ID</th> -->
+         <th>Name</th>
+         <th>Gender</th>
+         <th>Email</th>
+         <!-- <th>Password</th> -->
+         <th>Phone</th>
+         <th>License</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr *ngFor="let user of users" [ngClass]="{ 'male-row': user.gender === 'male', 'female-row': user.gender === 'female' }">
+         <!-- <td>{{user.id}}</td> -->
+         <td>{{user.name}}</td>
+         <td>{{user.gender}}</td>
+         <td>{{user.email}}</td>
+         <!-- <td>{{user.password}}</td> -->
+         <td>{{user.phone}}</td>
+         <td>{{user.licenseid}}</td>
+       </tr>
+     </tbody>
+   </table>
